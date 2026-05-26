@@ -1,0 +1,56 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Clash Display"', '"Syne"', 'sans-serif'],
+        body: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        void: '#050507',
+        deep: '#0C0C10',
+        surface: '#111116',
+        card: '#18181F',
+        border: '#252530',
+        fire: '#FF4500',
+        'fire-bright': '#FF6B00',
+        'fire-hot': '#FF2200',
+        ember: '#FF8C42',
+        gold: '#FFB800',
+        muted: '#4A4A6A',
+        text: '#F0F0F8',
+        'text-dim': '#8080A0',
+      },
+      animation: {
+        'float': 'float 8s ease-in-out infinite',
+        'pulse-fire': 'pulseFire 2s ease-in-out infinite',
+        'spin-slow': 'spin 25s linear infinite',
+        'spin-reverse': 'spinReverse 18s linear infinite',
+        'marquee': 'marquee 25s linear infinite',
+        'marquee2': 'marquee2 25s linear infinite',
+        'flicker': 'flicker 3s ease-in-out infinite',
+        'slide-up': 'slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
+        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+        'counter': 'counter 2s ease-out forwards',
+      },
+      keyframes: {
+        float: { '0%,100%': {transform:'translateY(0) rotate(0deg)'}, '33%': {transform:'translateY(-15px) rotate(1deg)'}, '66%': {transform:'translateY(-8px) rotate(-1deg)'} },
+        pulseFire: { '0%,100%': {opacity:'1',transform:'scale(1)'}, '50%': {opacity:'0.7',transform:'scale(1.05)'} },
+        spinReverse: { from: {transform:'rotate(360deg)'}, to: {transform:'rotate(0deg)'} },
+        marquee: { '0%': {transform:'translateX(0)'}, '100%': {transform:'translateX(-50%)'} },
+        marquee2: { '0%': {transform:'translateX(50%)'}, '100%': {transform:'translateX(0)'} },
+        flicker: { '0%,100%':{opacity:'1'}, '92%':{opacity:'1'}, '93%':{opacity:'0.4'}, '94%':{opacity:'1'}, '96%':{opacity:'0.6'}, '97%':{opacity:'1'} },
+        slideUp: { from:{opacity:'0',transform:'translateY(60px)'}, to:{opacity:'1',transform:'translateY(0)'} },
+        glowPulse: { '0%,100%':{boxShadow:'0 0 20px rgba(255,69,0,0.3)'}, '50%':{boxShadow:'0 0 60px rgba(255,69,0,0.7), 0 0 100px rgba(255,69,0,0.3)'} },
+      },
+      backgroundImage: {
+        'fire-gradient': 'linear-gradient(135deg, #FF4500 0%, #FF8C42 50%, #FFB800 100%)',
+        'fire-radial': 'radial-gradient(ellipse at center, #FF4500 0%, #FF2200 40%, transparent 70%)',
+        'dark-gradient': 'linear-gradient(180deg, #050507 0%, #0C0C10 100%)',
+      },
+    },
+  },
+  plugins: [],
+}
