@@ -93,3 +93,5 @@ npm run build
 
 Built for national web competition.
 Stack: React + Vite + Tailwind CSS
+<img width="2559" height="1190" alt="Screenshot 2026-05-26 210259" src="https://github.com/user-attachments/assets/d270a475-9c29-4335-8caf-711a78dc1052" />
+
